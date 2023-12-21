@@ -3,6 +3,7 @@ import fs from 'fs';
 
 
 
+
 function GetLink(text)
 {
     const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;

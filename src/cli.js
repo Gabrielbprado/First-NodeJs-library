@@ -7,11 +7,11 @@ const path = process.argv;
 
 
 
-function Exibir(valida,links,nomeFIle = "")
+async function Exibir(valida,links,nomeFIle = "")
 {
     if(valida)
     {
-    console.log(chalk.bgCyan('Lista Validada: '),validation(links));
+    console.log(chalk.bgCyan('Lista Validada: '),await validation(links));
     
     }
     else
@@ -41,13 +41,13 @@ catch (error){
     if(fs.lstatSync(path).isFile())
     {
         const links = await GetFile(path);
-        Exibir(valida,links);
+        await Exibir(valida,links);
     }else if (fs.lstatSync(path).isDirectory())
     {
         const arquivos = await fs.promises.readdir(path);
         arquivos.forEach(async (element) => {
             const links = await GetFile(`${path}/${element}`)
-         Exibir(valida,links,element);    
+            await Exibir(valida,links,element);    
         });
         
     }
