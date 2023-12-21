@@ -1,17 +1,36 @@
 {
-  "name": "read-lib-markdow",
+  "name": "vlk",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000F\u0000i\u0000r\u0000s\u0000t\u0000-\u0000N\u0000o\u0000d\u0000e\u0000J\u0000s\u0000-\u0000l\u0000i\u0000b\u0000r\u0000a\u0000r\u0000y\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "Lib que verifica o status de um link",
+  "keywords": [
+    "markdown",
+    "URL"
+  ],
+  "main": "./cli.js",
   "type": "module",
-  
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cli:valida" : "node ./src/cli.js ./assets/Teste.md --valida"
+  "bin": {
+    "vlk": "./cli.js"
   },
-  "author": "",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "jest ./test",
+    "cli:valida": "node ./src/cli.js ./assets/Teste.md --valida"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielbprado/NodeJS-Library-Links"
+  },
+  "author": "Gabriel Prado",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielbprado/NodeJS-Library-Links"
+  },
+  "homepage": "https://github.com/Gabrielbprado/NodeJS-Library-Links",
   "dependencies": {
-    "chalk": "^5.3.0"
+    "chalk": "^4.1.2",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
   }
 }

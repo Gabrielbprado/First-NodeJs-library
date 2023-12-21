@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import chalk from 'chalk';
 import GetFile from './index.js';
 import fs from 'fs';
