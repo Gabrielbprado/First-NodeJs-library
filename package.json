@@ -6,7 +6,7 @@
     "markdown",
     "URL"
   ],
-  "main": "./cli.js",
+  "main": "./src/cli.js",
   "type": "module",
   "bin": {
     "vlk": "./cli.js"
