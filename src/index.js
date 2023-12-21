@@ -7,9 +7,7 @@ function GetLink(text)
     const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
     const file = [...text.matchAll(regex)];
     const links = file.map(file => ({[file[1]] : file[2]}));
-    links.forEach((element) => {
-        console.log(element);    
-    });
+   return links;
     
 }
 
@@ -30,4 +28,4 @@ async function GetFile(path)
         TrataErro(error);
     }
 }
-export default GetFile();
+export default GetFile;
